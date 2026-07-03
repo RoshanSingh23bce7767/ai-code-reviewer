@@ -1,0 +1,26 @@
+{
+  "name": "ai-code-review-platform",
+  "version": "1.0.0",
+  "description": "Production-Ready AI Code Review Platform built on React 19, Express, MongoDB, Redis, and Gemini API",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm install --prefix client && npm install --prefix server",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build:server": "npm run build --prefix server",
+    "build:client": "npm run build --prefix client",
+    "build": "npm run build:server && npm run build:client",
+    "test:server": "npm run test --prefix server",
+    "test:server:coverage": "npm run test:coverage --prefix server",
+    "test:server:integration": "npm run test:integration --prefix server",
+    "test:client": "npm run test --prefix client",
+    "test": "npm run test:server && npm run test:client",
+    "lint": "npm run lint --prefix client && npm run lint --prefix server"
+  },
+  "author": "Roshan Singh",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

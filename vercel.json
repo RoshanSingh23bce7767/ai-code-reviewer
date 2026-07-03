@@ -1,0 +1,16 @@
+{
+  "installCommand": "cd client && npm install",
+  "buildCommand": "cd client && npm run build",
+  "outputDirectory": "client/dist",
+  "framework": "vite",
+  "env": {
+    "VITE_API_URL": "https://roshan-codeinsight-ai-api.onrender.com/api/v1",
+    "VITE_AI_MODEL": "gemini-2.5-flash-lite"
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

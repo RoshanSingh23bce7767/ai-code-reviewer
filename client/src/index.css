@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-bg-app: var(--bg-app);
+  --color-surface-app: var(--surface-app);
+  --color-card-app: var(--card-app);
+  --color-border-app: var(--border-app);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+:root {
+  /* Light Mode default variables */
+  --primary: #4F46E5;
+  --primary-hover: #4338CA;
+  --bg-app: #F3F4F6;
+  --surface-app: #FFFFFF;
+  --card-app: #FAFAFA;
+  --border-app: #E5E7EB;
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+}
+
+/* Dark Mode (Default configuration in ThemeContext) */
+:root.dark {
+  --primary: #6366F1;
+  --primary-hover: #4F46E5;
+  --bg-app: #09090B;
+  --surface-app: #111827;
+  --card-app: #18181B;
+  --border-app: #27272A;
+  --text-primary: #FFFFFF;
+  --text-secondary: #A1A1AA;
+}
+
+/* Base resets & typography */
+body {
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-app);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Glassmorphism effects */
+.glass {
+  background: rgba(24, 24, 27, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.light .glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
