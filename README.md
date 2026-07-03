@@ -2,6 +2,11 @@
 
 AI Code Reviewer is a full-stack code review app with a React/Vite client and an Express/TypeScript backend. It supports email/password authentication, protected sessions, AI-powered code review, review history, analytics, and language-specific editor support.
 
+## Live Deployment
+
+- Frontend: [https://roshan-codeinsight-ai.vercel.app](https://roshan-codeinsight-ai.vercel.app)
+- Backend API: [https://roshan-codeinsight-ai-api.onrender.com](https://roshan-codeinsight-ai-api.onrender.com)
+
 ## Tech Stack
 
 - Client: React, TypeScript, Vite, Monaco Editor
